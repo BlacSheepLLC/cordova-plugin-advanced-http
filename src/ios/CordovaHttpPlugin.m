@@ -424,7 +424,7 @@
     [[SDNetworkActivityIndicator sharedActivityIndicator] startActivity];
 
     @try {
-        [manager POST:url parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        [manager PUT:url parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
             NSError *error;
             for (int i = 0; i < [filePaths count]; i++) {
                 NSString *filePath = (NSString *) [filePaths objectAtIndex:i];
